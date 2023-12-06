@@ -32,3 +32,26 @@ void imprimirMatriz(int filas, int columnas, int limite, int matriz[columnas][fi
         }
     }
 }
+
+int main() {
+    int filas, columnas, limite;
+    printf("Ingrese el numero de filas:\n");
+    scanf("%d", &filas);
+    printf("Ingrese el numero de columnas:\n");
+    scanf("%d", &columnas);
+    printf("Ingrese el numero de limites:\n");
+    scanf("%d", &limite);
+
+    int matriz[columnas][filas][limite];
+
+    // Inicializar todas las matrices en ceros
+    MatrizCeros(filas, columnas, limite, matriz);
+
+    // Inicializar la última matriz en unos
+    MatrizUnos(filas, columnas, limite, matriz);
+
+    // Imprimir la matriz
+    imprimirMatriz(filas, columnas, limite, matriz);
+
+    return 0;
+}
