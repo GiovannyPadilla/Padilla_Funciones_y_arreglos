@@ -19,3 +19,16 @@ void MatrizUnos(int filas, int columnas, int limite, int matriz[columnas][filas]
         }
     }
 }
+
+// Función para imprimir la matriz
+void imprimirMatriz(int filas, int columnas, int limite, int matriz[columnas][filas][limite]) {
+    printf("Matriz resultante:\n");
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            for (int k = 0; k < limite; k++) {
+                printf("%d ", matriz[j][i][k]);
+            }
+            printf("\n");
+        }
+    }
+}
