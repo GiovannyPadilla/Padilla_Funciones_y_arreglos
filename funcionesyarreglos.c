@@ -24,3 +24,14 @@ void MatrizAleatoria(int filas, int columnas, int matriz[filas][columnas]) {
         printf("\n");
     }
 }
+// Función para sumar dos matrices
+void sumarMatrices(int filas, int columnas, int A[filas][columnas], int B[filas][columnas], int C[filas][columnas]) {
+    printf("\nLa suma de las matrices es:\n");
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            C[i][j] = A[i][j] + B[i][j];
+            printf("%d ", C[i][j]);
+        }
+        printf("\n");
+    }
+}
