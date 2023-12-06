@@ -4,9 +4,9 @@
 
 // Función para ingresar las dimensiones de la matriz
 void DimensionesMatriz(int *filas, int *columnas) {
-    printf("Ingrese el número de filas:\n");
+    printf("Ingrese el numero de filas:\n");
     scanf("%d", filas);
-    printf("Ingrese el número de columnas:\n");
+    printf("Ingrese el numero de columnas:\n");
     scanf("%d", columnas);
 }
 //generar matriz aleatoria
@@ -34,4 +34,25 @@ void sumarMatrices(int filas, int columnas, int A[filas][columnas], int B[filas]
         }
         printf("\n");
     }
+}
+
+int main() {
+    int filas, columnas;
+
+    // Ingresar dimensiones de la matriz
+    DimensionesMatriz(&filas, &columnas);
+
+    // Declarar matrices
+    int A[filas][columnas];
+    int B[filas][columnas];
+    int C[filas][columnas];
+
+    // Generar matrices aleatorias A y B
+    MatrizAleatoria(filas, columnas, A);
+    MatrizAleatoria(filas, columnas, B);
+
+    // Sumar matrices A y B
+    sumarMatrices(filas, columnas, A, B, C);
+
+    return 0;
 }
